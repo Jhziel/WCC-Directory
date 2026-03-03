@@ -1,4 +1,4 @@
-name: Deploy to Hostinger
+name: Deploy Laravel via SSH
 
 on:
   push:
@@ -7,70 +7,24 @@ on:
 
 jobs:
   deploy:
-    name: Build & Deploy
     runs-on: ubuntu-latest
 
     steps:
-      # ── 1. Checkout code ─────────────────────────────────────────────
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      # ── 2. Setup Node & build frontend assets ────────────────────────
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install Node dependencies
-        run: npm ci
-
-      - name: Build frontend assets
-        run: npm run build
-
-      # ── 3. Setup PHP & install Composer dependencies ──────────────────
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-          tools: composer:v2
-          coverage: none
-
-      - name: Install Composer dependencies (production only)
-        run: composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
-
-      # ── 4. Upload built assets + vendor to Hostinger via rsync ────────
-      - name: Deploy files to server via rsync
-        uses: burnett01/rsync-deployments@7.0.1
-        with:
-          switches: -avzr --delete --exclude='.env' --exclude='storage/logs/*' --exclude='storage/framework/sessions/*' --exclude='storage/framework/cache/*' --exclude='storage/framework/views/*'
-          path: ./
-          remote_path: ${{ secrets.DEPLOY_PATH }}
-          remote_host: ${{ secrets.SSH_HOST }}
-          remote_port: ${{ secrets.SSH_PORT }}
-          remote_user: ${{ secrets.SSH_USERNAME }}
-          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      # ── 5. Run post-deploy artisan commands via SSH ───────────────────
-      - name: Run post-deploy commands
+      - name: Deploy to Cyber Panel
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
-          port: ${{ secrets.SSH_PORT }}
-          username: ${{ secrets.SSH_USERNAME }}
+          username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
           script: |
-            cd ${{ secrets.DEPLOY_PATH }}
-
-            # Run migrations
+            cd ${{ secrets.APP_PATH }}
+            git pull origin master
+            composer install --no-dev --optimize-autoloader
             php artisan migrate --force
-
-            # Cache config, routes, views for performance
-            php artisan config:cache
+            php artisan optimize
             php artisan route:cache
-            php artisan view:cache
-
-            # Create storage symlink manually (exec() is disabled on Hostinger shared hosting)
-            ln -sfn ${{ secrets.DEPLOY_PATH }}/storage/app/public ${{ secrets.DEPLOY_PATH }}/public/storage
-
-            echo "✅ Deployment complete."
+            php artisan config:cache

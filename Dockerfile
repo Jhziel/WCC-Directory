@@ -26,9 +26,13 @@ FROM node:25-bookworm as node
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY package*.json ./
 
+# Install dependencies first
 RUN npm install
 
-VOLUME /var/www/html/node_modules
-CMD [ "npm","run","dev" ]
+# Copy the rest of the app
+COPY . .
+
+# Start dev server
+CMD ["npm", "run", "dev"]
