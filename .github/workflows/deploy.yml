@@ -3,7 +3,7 @@ name: Laravel Auto-Deploy
 on:
   push:
     branches:
-      - main  # deploy when main branch is pushed
+      - master  # deploy when master branch is pushed
 
 jobs:
   deploy:
