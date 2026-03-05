@@ -1,21 +1,21 @@
 import panzoom from "panzoom";
 
 document.addEventListener("DOMContentLoaded", () => {
+    const wrapper = document.getElementById("svg-wrapper");
+    const element = document.getElementById("panzoom-container");
 
+    if (!element || !wrapper) return;
+    
+    const instance = panzoom(element, {
+        maxZoom: 6,
+        minZoom: 1,
+        bounds: true,
+        boundsPadding: 0.7,
+        smoothScroll: false,
+    });
 
-      const wrapper = document.getElementById("svg-wrapper");
-      const element = document.getElementById("panzoom-container");
-
-      const instance = panzoom(element, {
-          maxZoom: 6,
-          minZoom: 1,
-          bounds: true,
-          boundsPadding: 0.7,
-          smoothScroll: false,
-      });
-
-       //Enable mouse wheel zoom
-      wrapper.addEventListener("wheel", instance.zoomWithWheel);
+    //Enable mouse wheel zoom
+    wrapper.addEventListener("wheel", instance.zoomWithWheel);
 
     //      Only drag when NOT clicking a room
     //    element.addEventListener("mousedown", function (e) {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //        }
     //    });
 
-      /* ----------------------------------
+    /* ----------------------------------
          Click room → Zoom into it
       ---------------------------------- */
     //   document.querySelectorAll(".room").forEach((room) => {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //       });
     //   });
 
-      /* ----------------------------------
+    /* ----------------------------------
          Auto focus from URL
       ---------------------------------- */
     //   const selectedRoom = new URLSearchParams(window.location.search).get(
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //           instance.smoothZoom(moveX, moveY, minScale / currentScale);
     //       }, 300);
     //   }
-      /* ----------------------------------
+    /* ----------------------------------
           Zoom Function
       ---------------------------------- */
     //   function zoomToRoom(room) {
@@ -105,4 +105,4 @@ document.addEventListener("DOMContentLoaded", () => {
     //           smoothReset();
     //       }, 1500);
     //   }
- });
+});
