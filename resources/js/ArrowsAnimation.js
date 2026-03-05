@@ -73,18 +73,18 @@ document.addEventListener("DOMContentLoaded", () => {
         animate();
     }
     // EE SHOP
-    animateArrow("path1", "arrow1", 1);
-    animateArrow("path2", "arrow2", 0.9);
-    animateArrow("path3", "arrow3", 0.9);
-    animateArrow("path4", "arrow4", 0.9);
-    animateArrow("path6", "arrow6", 0.9);
-    animateArrow("path7", "arrow7", 0.9);
-    animateArrow("path8", "arrow8", 0.9);
-    animateArrow("path9", "arrow9", 1);
-    animateArrow("path10", "arrow10", 0.9);
-    animateArrow("path11", "arrow11", 0.9);
-    animateArrow("path12", "arrow12", 0.9);
-    animateArrow("path13", "arrow13", 1);
+    animateArrow("path1", "arrow1", 1.2);
+    animateArrow("path2", "arrow2", 1.1);
+    animateArrow("path3", "arrow3", 1.1);
+    animateArrow("path4", "arrow4", 1.1);
+    animateArrow("path6", "arrow6", 1.1);
+    animateArrow("path7", "arrow7", 1.1);
+    animateArrow("path8", "arrow8", 1.1);
+    animateArrow("path9", "arrow9", 1.2);
+    animateArrow("path10", "arrow10", 1.1);
+    animateArrow("path11", "arrow11", 1.1);
+    animateArrow("path12", "arrow12", 1.1);
+    animateArrow("path13", "arrow13", 1.2);
 
     //Cashier
 
