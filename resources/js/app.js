@@ -1,5 +1,6 @@
 import './bootstrap';
 import './floor';
+import './ArrowsAnimation';
 
 import Alpine from 'alpinejs';
 
