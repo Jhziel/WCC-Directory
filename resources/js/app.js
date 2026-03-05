@@ -1,8 +1,9 @@
-import './bootstrap';
-import './floor';
-import './ArrowsAnimation';
+import "./bootstrap";
+import "./PanZoom";
 
-import Alpine from 'alpinejs';
+import "./ArrowsAnimation";
+
+import Alpine from "alpinejs";
 
 window.Alpine = Alpine;
 
