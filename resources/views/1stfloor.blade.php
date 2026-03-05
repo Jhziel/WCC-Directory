@@ -6029,7 +6029,7 @@ C 1610.4520 652.5785
   <g id="arrow5"></g>
   <g id="arrow6"></g>
   <g id="arrow7"></g>
-  <g id="arrow8"></g>
+ 
   <g id="arrow8"></g>
   <g id="arrow9"></g>
   <g id="arrow10"></g>
