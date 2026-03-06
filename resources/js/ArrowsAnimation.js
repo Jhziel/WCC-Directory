@@ -83,6 +83,21 @@ document.addEventListener("DOMContentLoaded", () => {
     setupArrow("CAREER-CENTER", "Circle-CAREER-CENTER", 3);
     setupArrow("ATM-LAB", "Circle-ATM-LAB", 5);
     setupArrow("HANGAR", "Circle-HANGAR", 4);
+    setupArrow("ROOM-401", "Circle-401", 6);
+    setupArrow("ROOM-403", "Circle-403", 6);
+    setupArrow("ROOM-405", "Circle-405", 5);
+    setupArrow("ROOM-407", "Circle-407", 5);
+    setupArrow("ROOM-409", "Circle-409", 3);
+    setupArrow("ROOM-411", "Circle-411", 2);
+    setupArrow("COMFORT-ROOM-4", "Circle-COMFORT-ROOM-4", 7);
+    setupArrow("ROOM-402", "Circle-402", 7);
+    setupArrow("ROOM-404", "Circle-404", 7);
+    setupArrow("ROOM-406", "Circle-406", 5);
+    setupArrow("ROOM-408", "Circle-408", 5);
+    setupArrow("ROOM-410", "Circle-410", 4);
+    setupArrow("ROOM-412", "Circle-412", 2);
+    setupArrow("LIBRARY", "Circle-LIBRARY", 2);
+    setupArrow("DEPARTMENT", "Circle-DEPARTMENT", 3);
     setupArrow("EXIT", "Circle-EXIT", 1.9);
 
     const activeRoom = new URLSearchParams(window.location.search).get("room");
