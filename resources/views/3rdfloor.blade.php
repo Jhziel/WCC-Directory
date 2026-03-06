@@ -16336,7 +16336,7 @@
              clearTimeout(inactivityTimer);
              inactivityTimer = setTimeout(() => {
                  window.location.href = '{{ route('welcome') }}';
-             }, 12000);
+             }, 15000);
          }
          ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'].forEach(event => {
              document.addEventListener(event, resetTimer, true);
