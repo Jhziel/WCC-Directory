@@ -1,58 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2nd Floor - WCC SCAN Campus Directory</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .floor-container {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding: 1rem 1rem 1rem 7rem;
-            box-sizing: border-box;
-        }
-
-        .svg-wrapper {
-            flex: 1;
-            overflow: hidden;
-            display: flex;
-            align-items: stretch;
-        }
-
-        .svg-wrapper svg {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-    </style>
-</head>
-
-<body style="background: linear-gradient(90deg);">
-    <!-- Floor Navigator Component -->
-    <x-floor-navigator :currentFloor="2" />
-
-    <!-- Main Content -->
-    <div class="floor-container">
-        <!-- Header -->
-        <div class="text-center mb-4">
-            <h1 class="text-2xl font-bold text-black mb-1">2nd Floor</h1>
-            <p class="text-sm text-black/70">WCC SCAN Campus Directory</p>
-        </div>
-
-        <!-- SVG Container -->
-        <div class="svg-wrapper">
-           <svg
-  width="1939" height="653" viewBox="0 0 1939 653" fill="none" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1939"
+   height="653"
+   viewBox="0 0 1939 653"
+   fill="none"
+   version="1.1"
+   id="svg230637"
+   sodipodi:docname="2ndFloor.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
      id="namedview230639"
      pagecolor="#ffffff"
@@ -63,9 +22,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.39556472"
-     inkscape:cx="969.5"
-     inkscape:cy="327.38005"
+     inkscape:zoom="1.5822589"
+     inkscape:cx="631.05981"
+     inkscape:cy="424.39325"
      inkscape:window-width="1366"
      inkscape:window-height="699"
      inkscape:window-x="0"
@@ -11836,117 +11795,9 @@
          id="feBlend230632" />
     </filter>
   </defs>
-
-     @if (request('room')=="down")
-      <path
-        d="m 617.52789,344.9242 -0.0908,-100.42265"
-        stroke="blue"
-        stroke-width="2"
-        fill="none"
-    />
-    
-    <path
-        id="EXIT"
-        d="m 617.52789,344.9242 -0.0908,-100.42265"
-        stroke="#44aa00"
-        stroke-width="15"
-        fill="none"
-        sodipodi:nodetypes="ccc"
-        data-room="down"
-    />
-    <g id="Circle-EXIT"></g>
-
-     @elseif (request('room')=="36")
-      <path
-        d="M 803.95346 378.76032
-        C 805.81966 395.16480 804.49581 412.70454 776.32780 415.06374
-        L 578.81548 415.91052
-        L 578.19828 381.26366"        
-        stroke="blue"
-        stroke-width="2"
-        fill="none"
-    />
-   
-    <path
-        id="ROOM-211"
-        d="M 803.95346 378.76032
-        C 805.81966 395.16480 804.49581 412.70454 776.32780 415.06374
-        L 578.81548 415.91052
-        L 578.19828 381.26366"
-        stroke="#44aa00" 
-        stroke-width="15"
-        fill="none"
-        sodipodi:nodetypes="ccc"
-        data-room="36"
-    />
-    <g id="Circle-36"></g>
-
-    
-     @elseif (request('room')=="44")
-      <path
-        d="m 803.07181,456.08384 c 8.59185,-25.12796 -3.7,-34.75816 -23.3038,-40.46216 l -204.88283,0.68385 -0.93596,-28.35033"
-        stroke="blue"
-        stroke-width="2"
-        fill="none"
-    />
-   
-
-     
-    <path
-        id="ROOM-210"
-        d="m 803.07181,456.08384 c 8.59185,-25.12796 -3.7,-34.75816 -23.3038,-40.46216 l -204.88283,0.68385 -0.93596,-28.35033"
-        stroke="#44aa00" 
-        stroke-width="15"
-        fill="none"
-        sodipodi:nodetypes="ccc"
-        data-room="44"
-    />
-    <g id="Circle-210"></g>
-    
-    @endif
+  <path
+     style="fill:#d6d2e3;fill-opacity:0;stroke:#44aa00;stroke-width:22;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.998329"
+     d="m 803.07181,456.08384 c 8.59185,-25.12796 -3.7,-34.75816 -23.3038,-40.46216 l -204.88283,0.68385 -0.93596,-28.35033"
+     id="path249050"
+     sodipodi:nodetypes="cccc" />
 </svg>
-
-
-
-        </div>
-
-        <!-- Back Button -->
-        <!-- Back Buttons -->
-        <div class="flex justify-center gap-4 mt-2 mb-2">
-            <a href="{{ route('homepage') }}"
-                class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white text-sm font-semibold rounded-lg hover:from-green-700 hover:to-green-800 transition-all duration-300 shadow-md hover:shadow-lg">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                </svg>
-                Back to Homepage
-            </a>
-            <a href="{{ route('campus.directory') }}"
-                class="inline-flex items-center px-4 py-2 bg-white text-green-800 text-sm font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-md hover:shadow-lg">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-                Campus Directory
-            </a>
-        </div>
-    </div>
-    {{-- <script>
-        let inactivityTimer;
-
-        function resetTimer() {
-            clearTimeout(inactivityTimer);
-            inactivityTimer = setTimeout(() => {
-                window.location.href = '{{ route('welcome') }}';
-            }, 12000);
-        }
-        ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'].forEach(event => {
-            document.addEventListener(event, resetTimer, true);
-        });
-        resetTimer();
-    </script> --}}
-</body>
-
-</html>
