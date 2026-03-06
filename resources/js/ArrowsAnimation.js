@@ -60,6 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
     setupArrow("FACULTY-ROOM", "Circle-FACULTY-ROOM", 3);
     setupArrow("ROOM-211", "Circle-211", 2);
     setupArrow("ROOM-210", "Circle-210", 2);
+    setupArrow("ROOM-208", "Circle-208", 3);
+    setupArrow("COMPUTER-ROOM", "Circle-COMPUTER ROOM", 3);
+    setupArrow("ROOM-202", "Circle-202", 4);
+    setupArrow("ROOM-CR-2", "Circle-CR-2", 6);
+    setupArrow("ROOM-203", "Circle-203", 6);
+    setupArrow("ROOM-205", "Circle-205", 6);
+    setupArrow("ROOM-207", "Circle-207", 4);
+    setupArrow("ROOM-209", "Circle-209", 4);
     setupArrow("EXIT", "Circle-EXIT", 1.9);
 
     const activeRoom = new URLSearchParams(window.location.search).get("room");

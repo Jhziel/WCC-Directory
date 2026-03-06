@@ -30,7 +30,7 @@
             width: 100%;
         }
 
-        #panzoom-container {
+        .panzoom-container {
             flex: 1;
             overflow: hidden;
             display: flex;
@@ -59,7 +59,7 @@
 
         <!-- SVG Container -->
         <div class="svg-wrapper">
-            <div id="panzoom-container">
+            <div class="panzoom-container">
             <svg
     width="1894"
     height="852"
