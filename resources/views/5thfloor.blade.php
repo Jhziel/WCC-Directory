@@ -4985,7 +4985,7 @@
             </a>
         </div>
     </div>
-    {{-- <script>
+    <script>
         let inactivityTimer;
 
         function resetTimer() {
@@ -4998,7 +4998,7 @@
             document.addEventListener(event, resetTimer, true);
         });
         resetTimer();
-    </script> --}}
+    </script>
 </body>
 
 </html>
