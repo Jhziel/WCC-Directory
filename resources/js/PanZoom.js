@@ -1,8 +1,8 @@
 import panzoom from "panzoom";
 
 document.addEventListener("DOMContentLoaded", () => {
-    const wrapper = document.getElementById("svg-wrapper");
-    const element = document.getElementById("panzoom-container");
+    const wrapper = document.querySelector(".svg-wrapper");
+    const element = document.querySelector(".panzoom-container");
 
     if (!element || !wrapper) return;
     
