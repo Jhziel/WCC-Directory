@@ -52,12 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
     setupArrow("COMFORT-ROOM", "Circle-COMFORT-ROOM", 6);
     setupArrow("CR", "Circle-CR", 2);
     setupArrow("ROOM-321", "Circle-321", 2);
-    setupArrow("ROOM-320", "Circle-320", 2); 
-    setupArrow("ROOM-319", "Circle-319", 2); 
-    setupArrow("ROOM-318", "Circle-318", 2); 
-    setupArrow("ROOM-317", "Circle-317", 2); 
-    setupArrow("ROOM-316", "Circle-316", 2); 
-    setupArrow("FACULTY-ROOM", "Circle-FACULTY-ROOM", 3); 
+    setupArrow("ROOM-320", "Circle-320", 2);
+    setupArrow("ROOM-319", "Circle-319", 2);
+    setupArrow("ROOM-318", "Circle-318", 2);
+    setupArrow("ROOM-317", "Circle-317", 2);
+    setupArrow("ROOM-316", "Circle-316", 2);
+    setupArrow("FACULTY-ROOM", "Circle-FACULTY-ROOM", 3);
+    setupArrow("ROOM-211", "Circle-211", 2);
+    setupArrow("ROOM-210", "Circle-210", 2);
+    setupArrow("EXIT", "Circle-EXIT", 1.9);
 
     const activeRoom = new URLSearchParams(window.location.search).get("room");
     const activeArrow = arrows.find((a) => a.room === activeRoom);
@@ -70,7 +73,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const delta = (time - lastTime) / 16.67;
         lastTime = time;
 
-        if (activeArrow.finished) return;
+        if (activeArrow.finished) {
+            goNextFloor();
+            return;
+        }
 
         const { path, arrow, length, direction } = activeArrow;
 
@@ -102,4 +108,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     requestAnimationFrame(animate);
+
+    function goNextFloor() {
+        const currentFloor = parseInt(
+            window.location.pathname.split("/").pop(),
+        );
+        const targetFloor = parseInt(localStorage.getItem("targetFloor"));
+        const room = parseInt(localStorage.getItem("room"));
+
+        if (!targetFloor) return;
+
+        if (currentFloor === targetFloor) {
+            localStorage.removeItem("targetFloor");
+            localStorage.removeItem("room");
+            return;
+        }
+
+        let nextFloor;
+
+        if (targetFloor > currentFloor) {
+            nextFloor = currentFloor + 1;
+        } else {
+            nextFloor = currentFloor - 1;
+        }
+
+        setTimeout(() => {
+            const isFar = Math.abs(currentFloor - targetFloor) > 1;
+
+            if (isFar) {
+                if (currentFloor > targetFloor)
+                    window.location.href = "/floor/" + nextFloor + "?room=down";
+                else window.location.href = "/floor/" + nextFloor + "?room=up";
+            } else {
+                window.location.href = `/floor/${nextFloor}?room=${room}`;
+            }
+        }, 2000);
+    }
 });

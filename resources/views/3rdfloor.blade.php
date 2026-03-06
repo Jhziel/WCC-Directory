@@ -16280,6 +16280,24 @@
         data-room="50"
     />
     <g id="Circle-FACULTY-ROOM"></g>
+
+    @elseif (request('room')=="exit")
+      <path
+        d="m 537.72185,568.72149 1.57381,42.05363 -213.51087,0.9042"        
+        stroke="blue"
+        stroke-width="2"
+        fill="none"
+    />
+    <path
+        id="EXIT"
+        d="m 537.72185,568.72149 1.57381,42.05363 -213.51087,0.9042"        
+        stroke="#44aa00"
+        stroke-width="15"
+        fill="none"
+        sodipodi:nodetypes="ccc"
+        data-room="exit"
+    />
+    <g id="Circle-EXIT"></g>
     
     @endif
     
