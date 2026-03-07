@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const length = path.getTotalLength();
 
-        path.style.strokeDasharray = "0,15";
+        path.style.strokeDasharray = "0,13";
         // path.style.strokeDashoffset = 0;
 
         const arrowShape = document.createElementNS(
@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupArrow("ROOM-CR-2", "Circle-CR-2", 6);
     setupArrow("ROOM-203", "Circle-203", 6);
     setupArrow("ROOM-205", "Circle-205", 6);
+    setupArrow("ROOM-110", "Circle-110", 4);
     setupArrow("ROOM-207", "Circle-207", 4);
     setupArrow("ROOM-209", "Circle-209", 4);
     setupArrow("ROOM-111", "Circle-111", 3);
@@ -129,6 +130,20 @@ document.addEventListener("DOMContentLoaded", () => {
     setupArrow("ROOM-608", "Circle-608", 4);
     setupArrow("ROOM-610", "Circle-610", 4);
     setupArrow("ROOM-612", "Circle-612", 2);
+    setupArrow("AMT-LAB", "Circle-AMT-LAB", 2);
+    setupArrow("BASKETBALL-COURT", "Circle-BASKETBALL-COURT", 2);
+    setupArrow("TOOL-ROOM", "Circle-TOOL-ROOM", 3);
+    setupArrow("ELEVATOR", "Circle-ELEVATOR", 3);
+    setupArrow("COMFORT-ROOM-7", "Circle-COMFORT-ROOM-7", 6);
+    setupArrow("STOCK-ROOM-8", "Circle-STOCK-ROOM-8", 6);
+    setupArrow("BASKETBALL-COURT-8", "Circle-BASKETBALL-COURT-8", 2);
+    setupArrow("PAINT-LAB", "Circle-PAINT-LAB", 6);
+    setupArrow("Avionics-Lab", "Circle-Avionics-Lab", 3);
+    setupArrow("Non-Destructive-Lab", "Circle-Non-Destructive-Lab", 2);
+    setupArrow("Power-Plant", "Circle-Power-Plant", 3);
+    setupArrow("Tool-Room-East", "Circle-Tool-Room-East", 3);
+    setupArrow("Stage", "Circle-Stage", 5);
+    setupArrow("Comfort-Room-AMT", "Circle-Comfort-Room-AMT", 4);
     setupArrow("EXIT", "Circle-EXIT", 1.9);
 
     const activeRoom = new URLSearchParams(window.location.search).get("room");

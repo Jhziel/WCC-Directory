@@ -4347,7 +4347,7 @@
 
                     @php
                         $room = request('room');
-                        $paths = config('roompaths');
+                         $paths = config('RoomPaths.6thFloor');
                         $data = $paths[$room] ?? null;
                     @endphp
 
@@ -4360,8 +4360,6 @@
                         <g id="Circle-{{ $data['circle'] }}"></g>
                     @endif
                 </svg>
-
-
             </div>
         </div>
 
@@ -4389,18 +4387,18 @@
         </div>
     </div>
     <script>
-        // let inactivityTimer;
+         let inactivityTimer;
 
-        // function resetTimer() {
-        //     clearTimeout(inactivityTimer);
-        //     inactivityTimer = setTimeout(() => {
-        //         window.location.href = '{{ route('welcome') }}';
-        //     }, 12000);
-        // }
-        // ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'].forEach(event => {
-        //     document.addEventListener(event, resetTimer, true);
-        // });
-        // resetTimer();
+        function resetTimer() {
+            clearTimeout(inactivityTimer);
+            inactivityTimer = setTimeout(() => {
+                 window.location.href = '{{ route('welcome') }}';
+            }, 15000);
+         }
+        ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'].forEach(event => {
+             document.addEventListener(event, resetTimer, true);
+         });
+         resetTimer();
     </script>
 </body>
 
