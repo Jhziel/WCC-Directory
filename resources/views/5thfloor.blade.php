@@ -3544,147 +3544,19 @@
                         </filter>
                     </defs>
 
-                    @if (request('room') == 'up')
-                        <path d="m 491.84066,81.643934 0.44142,93.207876" stroke="blue" stroke-width="2"
-                            fill="none" />
+                    @php
+                        $room = request('room');
+                        $paths = config('RoomPaths.5thFloor');
+                        $data = $paths[$room] ?? null;
+                    @endphp
 
-                        <path id="EXIT" d="m 491.84066,81.643934 0.44142,93.207876" stroke="#44aa00"
-                            stroke-width="15" fill="none" data-room="up" />
-                        <g id="Circle-EXIT"></g>
-                    @elseif (request('room') == 106)
-                        <path
-                            d="m 615.84253,203.31355 c 5.21761,19.00068 3.04965,34.05349 -0.8067,49.16496 l -88.62586,-1.45294 -0.19289,-64.0791"
-                            stroke="blue" stroke-width="2" fill="none" />
+                    @if ($data)
+                        {{-- main route --}}
+                        <path id="{{ $data['id'] }}" d="{{ $data['path'] }}" stroke="#44aa00" stroke-width="10"
+                            stroke-linecap="round" fill="none" data-room="{{ $room }}" />
 
-                        <path id="ROOM-513"
-                            d="m 615.84253,203.31355 c 5.21761,19.00068 3.04965,34.05349 -0.8067,49.16496 l -88.62586,-1.45294 -0.19289,-64.0791"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="106" />
-                        <g id="Circle-513"></g>
-                    @elseif (request('room') == 108)
-                        <path
-                            d="m 937.84253,203.31355 c 4.95291,27.23691 -3.34142,38.39058 -11.94889,46.25027 l -399.48367,1.46175 -0.19289,-64.0791"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="ROOM-509"
-                            d="m 937.84253,203.31355 c 4.95291,27.23691 -3.34142,38.39058 -11.94889,46.25027 l -399.48367,1.46175 -0.19289,-64.0791"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="108" />
-                        <g id="Circle-509"></g>
-                    @elseif (request('room') == 109)
-                        <path
-                            d="m 1097.8425,203.31355 c 4.9529,27.23691 -3.3414,38.39058 -11.9489,46.25027 l -559.48363,1.46175 -0.19289,-64.0791"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="ROOM-507"
-                            d="m 1097.8425,203.31355 c 4.9529,27.23691 -3.3414,38.39058 -11.9489,46.25027 l -559.48363,1.46175 -0.19289,-64.0791"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="109" />
-                        <g id="Circle-507"></g>
-                    @elseif (request('room') == 110)
-                        <path
-                            d="m 1257.8425,203.31355 c 4.9529,27.23691 -3.3414,38.39058 -11.9489,46.25027 l -719.48363,1.46175 -0.19289,-64.0791"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="ROOM-505"
-                            d="m 1257.8425,203.31355 c 4.9529,27.23691 -3.3414,38.39058 -11.9489,46.25027 l -719.48363,1.46175 -0.19289,-64.0791"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="110" />
-                        <g id="Circle-505"></g>
-                    @elseif (request('room') == 111)
-                        <path
-                            d="m 1451.8425,203.31355 c 4.9529,27.23691 -3.3414,38.39058 -11.9489,46.25027 l -913.48363,1.46175 -0.19289,-64.0791"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="ROOM-503"
-                            d="m 1451.8425,203.31355 c 4.9529,27.23691 -3.3414,38.39058 -11.9489,46.25027 l -913.48363,1.46175 -0.19289,-64.0791"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="111" />
-                        <g id="Circle-503"></g>
-                    @elseif (request('room') == 113)
-                        <path
-                            d="m 1685.8425,179.31355 c 4.9529,27.23691 -3.3414,72.39058 -11.9489,80.25027 l -1147.13319,0.60586 -0.54333,-73.22321"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="COMFORT-ROOM-5"
-                            d="m 1685.8425,179.31355 c 4.9529,27.23691 -3.3414,72.39058 -11.9489,80.25027 l -1147.13319,0.60586 -0.54333,-73.22321"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="113" />
-                        <g id="Circle-COMFORT-ROOM-5"></g>
-                    @elseif (request('room') == 112)
-                        <path
-                            d="m 1791.8936,231.56382 -142.039,2.05336 -0.043,25.95936 -1123.05149,0.59314 -0.54333,-73.22321"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="ROOM-501"
-                            d="m 1791.8936,231.56382 -142.039,2.05336 -0.043,25.95936 -1123.05149,0.59314 -0.54333,-73.22321"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="112" />
-                        <g id="Circle-501"></g>
-                    @elseif (request('room') == 114)
-                        <path
-                            d="m 617.81741,296.7387 c 1.04672,-17.78261 0.0944,-38.12605 -19.85312,-36.73133 l -71.26736,-0.35272 -0.48015,-72.70818"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="ROOM-512"
-                            d="m 617.81741,296.7387 c 1.04672,-17.78261 0.0944,-38.12605 -19.85312,-36.73133 l -71.26736,-0.35272 -0.48015,-72.70818"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="114" />
-                        <g id="Circle-512"></g>
-                    @elseif (request('room') == 115)
-                        <path
-                            d="m 777.81741,296.7387 c 1.04672,-17.78261 0.0944,-38.12605 -19.85312,-36.73133 l -231.26736,-0.35272 -0.48015,-72.70818"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="ROOM-510"
-                            d="m 777.81741,296.7387 c 1.04672,-17.78261 0.0944,-38.12605 -19.85312,-36.73133 l -231.26736,-0.35272 -0.48015,-72.70818"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="115" />
-                        <g id="Circle-510"></g>
-                    @elseif (request('room') == 116)
-                        <path
-                            d="m 937.81741,296.7387 c 1.04672,-17.78261 0.0944,-38.12605 -19.85312,-36.73133 l -391.26736,-0.35272 -0.48015,-72.70818"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="ROOM-508"
-                            d="m 937.81741,296.7387 c 1.04672,-17.78261 0.0944,-38.12605 -19.85312,-36.73133 l -391.26736,-0.35272 -0.48015,-72.70818"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="116" />
-                        <g id="Circle-508"></g>
-                    @elseif (request('room') == 117)
-                        <path
-                            d="m 1103.8174,296.7387 c 1.0467,-17.78261 0.094,-38.12605 -19.8531,-36.73133 l -557.26737,-0.35272 -0.48015,-72.70818"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="ROOM-506"
-                            d="m 1103.8174,296.7387 c 1.0467,-17.78261 0.094,-38.12605 -19.8531,-36.73133 l -557.26737,-0.35272 -0.48015,-72.70818"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="117" />
-                        <g id="Circle-506"></g>
-                    @elseif (request('room') == 118)
-                        <path
-                            d="m 1263.8174,296.7387 c 1.0467,-17.78261 0.094,-38.12605 -19.8531,-36.73133 l -717.26737,-0.35272 -0.48015,-72.70818"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="ROOM-504-502"
-                            d="m 1263.8174,296.7387 c 1.0467,-17.78261 0.094,-38.12605 -19.8531,-36.73133 l -717.26737,-0.35272 -0.48015,-72.70818"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="118" />
-                        <g id="Circle-504-502"></g>
-                    @elseif (request('room') == 103)
-                        <path
-                            d="m 378.62013,178.11449 32.54116,1.3588 -0.25908,68.27711 115.72558,1.16377 -0.41102,-61.9677"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="MOCK-HOTEL"
-                            d="m 378.62013,178.11449 32.54116,1.3588 -0.25908,68.27711 115.72558,1.16377 -0.41102,-61.9677"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="103" />
-                        <g id="Circle-MOCK-HOTEL"></g>
-                    @elseif (request('room') == 105)
-                        <path d="m 380.90221,293.7504 0.90531,-45.92687 144.82027,1.09064 -0.41102,-61.9677"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="ROOM-514"
-                            d="m 380.90221,293.7504 0.90531,-45.92687 144.82027,1.09064 -0.41102,-61.9677"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="105" />
-                        <g id="Circle-514"></g>
-                    @elseif (request('room') == 104)
-                        <path
-                            d="m 340.90221,269.7504 40.35646,0.57885 0.54885,-22.50572 144.82027,1.09064 -0.41102,-61.9677"
-                            stroke="blue" stroke-width="2" fill="none" />
-
-                        <path id="LIBRARY-5"
-                            d="m 340.90221,269.7504 40.35646,0.57885 0.54885,-22.50572 144.82027,1.09064 -0.41102,-61.9677"
-                            stroke="#44aa00" stroke-width="15" fill="none" data-room="104" />
-                        <g id="Circle-LIBRARY-5"></g>
+                        {{-- animated arrow container --}}
+                        <g id="Circle-{{ $data['circle'] }}"></g>
                     @endif
                 </svg>
 
@@ -3723,7 +3595,7 @@
             clearTimeout(inactivityTimer);
             inactivityTimer = setTimeout(() => {
                 window.location.href = '{{ route('welcome') }}';
-            }, 12000);
+            }, 15000);
         }
         ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'].forEach(event => {
             document.addEventListener(event, resetTimer, true);
