@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const length = path.getTotalLength();
 
-        path.style.strokeDasharray = length;
-        path.style.strokeDashoffset = 0;
+        path.style.strokeDasharray = "0,15";
+        // path.style.strokeDashoffset = 0;
 
         const arrowShape = document.createElementNS(
             "http://www.w3.org/2000/svg",
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupArrow("ROOM-606", "Circle-606", 5);
     setupArrow("ROOM-608", "Circle-608", 4);
     setupArrow("ROOM-610", "Circle-610", 4);
-    setupArrow("ROOM-612", "Circle-612", 3);
+    setupArrow("ROOM-612", "Circle-612", 2);
     setupArrow("EXIT", "Circle-EXIT", 1.9);
 
     const activeRoom = new URLSearchParams(window.location.search).get("room");
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
             activeArrow.finished = true; // stop animation
         }
 
-        path.style.strokeDashoffset = activeArrow.progress;
+        // path.style.strokeDashoffset = activeArrow.progress;
 
         const point = path.getPointAtLength(length - activeArrow.progress);
 
