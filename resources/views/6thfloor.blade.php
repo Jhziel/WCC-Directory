@@ -3577,18 +3577,18 @@
         </div>
     </div>
     <script>
-         let inactivityTimer;
+        let inactivityTimer;
 
         function resetTimer() {
             clearTimeout(inactivityTimer);
             inactivityTimer = setTimeout(() => {
-                 window.location.href = '{{ route('welcome') }}';
+                window.location.href = '{{ route('welcome') }}';
             }, 15000);
-         }
+        }
         ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'].forEach(event => {
-             document.addEventListener(event, resetTimer, true);
-         });
-         resetTimer();
+            document.addEventListener(event, resetTimer, true);
+        });
+        resetTimer();
     </script>
 </body>
 
