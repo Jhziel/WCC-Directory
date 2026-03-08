@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupArrow("ROOM-514", "Circle-514", 3);
     setupArrow("LIBRARY-5", "Circle-LIBRARY-5", 3);
     setupArrow("ROOM-504-502", "Circle-504-502", 2);
-    setupArrow("MOCK-HOTEL", "Circle-MOCK-HOTEL", 2);
+    setupArrow("MOCK-HOTEL-5", "Circle-MOCK-HOTEL-5", 2);
     setupArrow("ROOM-614", "Circle-614", 2);
     setupArrow("ROOM-615", "Circle-615", 3);
     setupArrow("ROOM-613", "Circle-613", 2);
