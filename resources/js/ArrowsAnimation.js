@@ -49,7 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
     setupArrow("ROOM-307", "Circle-307", 4);
     setupArrow("ROOM-305", "Circle-305", 4);
     setupArrow("ROOM-303", "Circle-303", 5);
+    setupArrow("ROOM-314", "Circle-314", 3);
     setupArrow("COMFORT-ROOM", "Circle-COMFORT-ROOM", 6);
+    setupArrow("COMFORT-ROOM-3", "Circle-COMFORT-ROOM-3", 6);
     setupArrow("CR", "Circle-CR", 2);
     setupArrow("ROOM-321", "Circle-321", 2);
     setupArrow("ROOM-320", "Circle-320", 2);
