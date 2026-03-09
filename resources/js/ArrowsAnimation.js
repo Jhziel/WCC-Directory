@@ -86,21 +86,27 @@ document.addEventListener("DOMContentLoaded", () => {
     setupArrow("CAREER-CENTER", "Circle-CAREER-CENTER", 3);
     setupArrow("ATM-LAB", "Circle-ATM-LAB", 5);
     setupArrow("HANGAR", "Circle-HANGAR", 4);
-    setupArrow("ROOM-401", "Circle-401", 6);
-    setupArrow("ROOM-403", "Circle-403", 6);
-    setupArrow("ROOM-405", "Circle-405", 5);
-    setupArrow("ROOM-407", "Circle-407", 5);
-    setupArrow("ROOM-409", "Circle-409", 3);
-    setupArrow("ROOM-411", "Circle-411", 2);
-    setupArrow("COMFORT-ROOM-4", "Circle-COMFORT-ROOM-4", 7);
-    setupArrow("ROOM-402", "Circle-402", 7);
-    setupArrow("ROOM-404", "Circle-404", 7);
-    setupArrow("ROOM-406", "Circle-406", 5);
-    setupArrow("ROOM-408", "Circle-408", 5);
-    setupArrow("ROOM-410", "Circle-410", 4);
-    setupArrow("ROOM-412", "Circle-412", 2);
     setupArrow("LIBRARY", "Circle-LIBRARY", 2);
+    setupArrow("WCC Library", "Circle-WCC Library", 2);
+    setupArrow("GLASSWARE", "Circle-GLASSWARE", 2);
+    setupArrow("Le Aviateur Restaurant", "Circle-Le Aviateur Restaurant", 2);
+    setupArrow("Unit Kitchen (Hot)", "Circle-Unit Kitchen (Hot)", 3);
+    setupArrow("SIHM-LAB", "Circle-SIHM-LAB", 4);
+    setupArrow("401-B Quality Assurance and Technology Office Room ", "Circle-401-B Quality Assurance and Technology Office Room ", 4);
+    setupArrow("Unit Kitchen (Cold)", "Circle-Unit Kitchen (Cold)", 3);
+    setupArrow("School Clinic", "Circle-School Clinic", 5);
+    setupArrow("Interrogation Room", "Circle-Interrogation Room", 5);
+    setupArrow("Classroom 410 Computer Laboratory", "Circle-Classroom 410 Computer Laboratory", 2);
     setupArrow("DEPARTMENT", "Circle-DEPARTMENT", 3);
+    setupArrow("ELEVATOR-4", "Circle-ELEVATOR-4", 3);
+    setupArrow("LIFT", "Circle-LIFT", 3);
+    setupArrow("Dean Office", "Circle-Dean Office", 5);
+    setupArrow("Academic Head Office", "Circle-Academic Head Office", 4);
+    setupArrow("AMT Department Office", "Circle-AMT Department Office", 3);
+    setupArrow("Classroom 402 Sihm Housekeeping Room", "Circle-Classroom 402 Sihm Housekeeping Room", 5);
+    setupArrow("Classroom 404 Criminology Laboratory Room", "Circle-Classroom 404 Criminology Laboratory Room", 3);
+    setupArrow("Classroom 408 OJT Simulation Room", "Circle-Classroom 408 OJT Simulation Room", 3);
+    setupArrow("Defense Tactics", "Circle-Defense Tactics", 3);
     setupArrow("ROOM-513", "Circle-513", 2);
     setupArrow("ROOM-511", "Circle-511", 3);
     setupArrow("ROOM-509", "Circle-509", 4);
@@ -228,6 +234,6 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 window.location.href = `/floor/${nextFloor}?room=${room}`;
             }
-        }, 2000);
+        }, 1500);
     }
 });
