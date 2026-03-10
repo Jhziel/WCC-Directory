@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ #debug-label{
+    opacity:0;
+    transition: opacity .25s ease, transform .15s ease;
+    cursor:pointer;
+    transform-origin:center;
+}
+
+#debug-label.show{
+    opacity:1;
+}
+
+#debug-label:hover{
+    transform:scale(1.05);
+}
+
+#debug-label rect{
+    transition:fill .2s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.room {
+    transition: fill 0.25s ease, fill-opacity 0.25s ease;
+}
+
+.route {
+    opacity: 1;
+    transition: opacity 3s ease;
+}
+
+.route.hidden {
+    opacity: 0;
+}
