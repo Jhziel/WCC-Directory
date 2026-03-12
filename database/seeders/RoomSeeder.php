@@ -213,6 +213,8 @@ class RoomSeeder extends Seeder
             ['name' => 'Elevator', 'floor' => 7, 'type' => 'elevator', 'center_x' => 1180, 'center_y' => 420, 'description' => 'Elevator', 'is_searchable' => true],
             ['name' => 'Exit East', 'floor' => 7, 'type' => 'exit', 'center_x' => 1100, 'center_y' => 480, 'description' => 'Exit', 'is_searchable' => true],
             ['name' => 'Stairs East', 'floor' => 7, 'type' => 'stairs', 'center_x' => 320, 'center_y' => 280, 'description' => 'Stairs', 'is_searchable' => true],
+            
+
         ];
         foreach ($floor7Rooms as $room) { Room::create($room); }
         
@@ -222,8 +224,8 @@ class RoomSeeder extends Seeder
             ['name' => 'Exit', 'floor' => 8, 'type' => 'exit', 'center_x' => 100, 'center_y' => 300, 'description' => 'Exit', 'is_searchable' => true],
             ['name' => 'Stairs', 'floor' => 8, 'type' => 'stairs', 'center_x' => 100, 'center_y' => 220, 'description' => 'Stairs', 'is_searchable' => true],
             ['name' => 'Painting Lab', 'floor' => 8, 'type' => 'lab', 'center_x' => 200, 'center_y' => 440, 'description' => 'Painting Lab', 'is_searchable' => true],
-            ['name' => 'Stage', 'floor' => 8, 'type' => 'facility', 'center_x' => 400, 'center_y' => 340, 'description' => 'Stage', 'is_searchable' => true],
-            ['name' => 'Basketball Court', 'floor' => 8, 'type' => 'gym', 'center_x' => 700, 'center_y' => 340, 'description' => 'Basketball Court', 'is_searchable' => true],
+            ['name' => 'Stage', 'floor' => 7, 'type' => 'facility', 'center_x' => 400, 'center_y' => 340, 'description' => 'Stage', 'is_searchable' => true],
+            ['name' => 'Basketball Court', 'floor' => 8, 'type' => 'gym', 'center_x' => 700, 'center_y' => 340, 'description' => 'Basketball Court', 'is_searchable' => false],
             ['name' => 'Avionics Lab', 'floor' => 8, 'type' => 'lab', 'center_x' => 1160, 'center_y' => 260, 'description' => 'Avionics Lab', 'is_searchable' => true],
             ['name' => 'Power Plant', 'floor' => 8, 'type' => 'lab', 'center_x' => 1320, 'center_y' => 260, 'description' => 'Power Plant', 'is_searchable' => true],
             ['name' => 'Tool Room', 'floor' => 8, 'type' => 'storage', 'center_x' => 1360, 'center_y' => 180, 'description' => 'Tool Room', 'is_searchable' => true],
