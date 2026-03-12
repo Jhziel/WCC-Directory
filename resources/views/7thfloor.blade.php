@@ -71,7 +71,7 @@
                     <rect width="1823" height="496" fill="#fff" />
                     <rect x="526.97" y="67" width="157" height="346" fill="#AC9362" fill-opacity=".5" />
                     <path id="STAGE-BG" d="m349.97 121h119.5l19.5 21.5 16 19.5v165l-18.5 20.5-17.5 19.5h-119v-246z"
-                        fill="#AC9362" fill-opacity=".5" />
+                        fill="{{ $room == 156 ? '#44aa00' : '#AC9362' }}" fill-opacity="{{ $room == 156 ? 1 : 0.5 }}" />
                     <rect id="COMFORT-ROOM-BG" fill="{{ $room == 145 ? '#44aa00' : '#9EEB9E' }}"
                         fill-opacity="{{ $room == 145 ? 1 : 0.61 }}" x="88.967" y="357" width="220" height="86" />
                     <g fill-opacity=".5">
