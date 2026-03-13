@@ -186,7 +186,7 @@
             clearTimeout(inactivityTimer);
             inactivityTimer = setTimeout(() => {
                 window.location.href = '{{ route('welcome') }}';
-            }, 12000); // 12 seconds
+            }, 30000); // 12 seconds
         }
         
         // Reset timer on any user activity
