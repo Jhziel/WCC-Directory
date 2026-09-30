@@ -1,5 +1,4 @@
 import "./bootstrap";
-import "./PanZoom";
 
 import "./ArrowsAnimation";
 
