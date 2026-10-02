@@ -1,4 +1,4 @@
-# WCC Campus Directory
+# WCC Campus KIOSK
 
 WCC Campus Directory is a Laravel web application for finding rooms and navigating the eight-floor WCC campus. It provides interactive floor maps, room search, campus information, announcements, events, visitor feedback, and administrative tools.
 
@@ -88,13 +88,6 @@ Room search and navigation endpoints are available under `/api/rooms`:
 
 For `POST /api/rooms/find-path`, send JSON containing `from_room_id` and `to_room_id`. Same-floor requests return a direct path. Cross-floor requests currently return instructions to use stairs or an elevator.
 
-## Tests
-
-Run the Laravel test suite with:
-
-```sh
-php artisan test
-```
 
 The test configuration uses an in-memory SQLite database.
 
